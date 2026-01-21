@@ -41,16 +41,18 @@ export function Hero() {
 
                 <MotionDiv delay={0.4}>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                        <Button size="lg" className="h-14 px-8 text-lg rounded-full">
+                        {/* <Button size="lg" className="h-14 px-8 text-lg rounded-full">
                             Empieza Gratis <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
-                        <Button
-                            variant="secondary"
-                            size="lg"
-                            className="h-14 px-8 text-lg rounded-full hover:bg-black/5"
-                        >
-                            Solicita una demo sin compromiso
-                        </Button>
+                        </Button> */}
+                        <a href="#contact" className="contents">
+                            <Button
+                                variant="secondary"
+                                size="lg"
+                                className="h-14 px-8 text-lg rounded-full hover:bg-black/5"
+                            >
+                                Solicita una demo sin compromiso
+                            </Button>
+                        </a>
                     </div>
                 </MotionDiv>
 
