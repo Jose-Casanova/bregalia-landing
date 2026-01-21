@@ -23,8 +23,8 @@ export function EmployeeSimplicity() {
                             {[
                                 "Fichaje instantáneo con un botón.",
                                 "Sin necesidad de instalar apps pesadas.",
-                                "Recordatorios automáticos para no olvidar fichar.",
-                                "Acceso desde cualquier smartphone u ordenador."
+                                "Acceso desde cualquier smartphone u ordenador.",
+                                "Adaptado al teletrabajo o trabajo remoto."
                             ].map((item, index) => (
                                 <li key={index} className="flex items-center gap-3 text-slate-700">
                                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
@@ -52,7 +52,7 @@ export function EmployeeSimplicity() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent pointer-events-none" />
                                 <div className="absolute bottom-6 left-6 right-6 text-white">
                                     <div className="text-sm font-medium opacity-80 mb-1">Interfaz Simplificada</div>
-                                    <div className="text-xl font-bold">Registro en 1 segundo</div>
+                                    <div className="text-xl font-bold">Registro en segundos</div>
                                 </div>
                             </div>
                         </div>
