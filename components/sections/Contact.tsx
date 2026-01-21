@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { Mail, Building2, User, MessageSquare, Send } from "lucide-react";
 import { MotionDiv } from "@/components/ui/MotionDiv";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 export function Contact() {
     const [formData, setFormData] = useState({
@@ -11,16 +12,11 @@ export function Contact() {
         email: "",
         company: "",
         message: "",
-        antiRobotAnswer: "",
     });
+    const [turnstileToken, setTurnstileToken] = useState<string>("");
     const [errors, setErrors] = useState<Record<string, string>>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
-
-    // Simple math challenge for anti-robot protection
-    const num1 = 5;
-    const num2 = 3;
-    const correctAnswer = num1 + num2;
 
     const validateForm = () => {
         const newErrors: Record<string, string> = {};
@@ -39,10 +35,8 @@ export function Contact() {
             newErrors.message = "El mensaje es obligatorio";
         }
 
-        if (!formData.antiRobotAnswer.trim()) {
-            newErrors.antiRobotAnswer = "Por favor, responde la pregunta de seguridad";
-        } else if (parseInt(formData.antiRobotAnswer) !== correctAnswer) {
-            newErrors.antiRobotAnswer = "Respuesta incorrecta. Inténtalo de nuevo.";
+        if (!turnstileToken) {
+            newErrors.turnstile = "Por favor, completa la verificación de seguridad";
         }
 
         setErrors(newErrors);
@@ -64,7 +58,10 @@ export function Contact() {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    ...formData,
+                    turnstileToken,
+                }),
             });
 
             const data = await response.json();
@@ -80,8 +77,8 @@ export function Contact() {
                 email: "",
                 company: "",
                 message: "",
-                antiRobotAnswer: "",
             });
+            setTurnstileToken("");
 
             setTimeout(() => {
                 setSubmitSuccess(false);
@@ -253,29 +250,31 @@ export function Contact() {
                                         )}
                                     </div>
 
-                                    {/* Anti-Robot Challenge */}
+                                    {/* Cloudflare Turnstile */}
                                     <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
-                                        <label
-                                            htmlFor="antiRobotAnswer"
-                                            className="block text-sm font-medium text-slate-700 mb-2"
-                                        >
-                                            Pregunta de seguridad: ¿Cuánto es {num1} + {num2}? *
+                                        <label className="block text-sm font-medium text-slate-700 mb-3">
+                                            Verificación de seguridad *
                                         </label>
-                                        <input
-                                            type="text"
-                                            id="antiRobotAnswer"
-                                            name="antiRobotAnswer"
-                                            value={formData.antiRobotAnswer}
-                                            onChange={handleChange}
-                                            className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all ${errors.antiRobotAnswer
-                                                ? "border-red-300 bg-red-50"
-                                                : "border-slate-200 bg-white"
-                                                }`}
-                                            placeholder="Tu respuesta"
+                                        <Turnstile
+                                            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+                                            onSuccess={(token) => {
+                                                setTurnstileToken(token);
+                                                setErrors((prev) => ({ ...prev, turnstile: "" }));
+                                            }}
+                                            onError={() => {
+                                                setTurnstileToken("");
+                                                setErrors((prev) => ({
+                                                    ...prev,
+                                                    turnstile: "Error en la verificación. Por favor, recarga la página.",
+                                                }));
+                                            }}
+                                            onExpire={() => {
+                                                setTurnstileToken("");
+                                            }}
                                         />
-                                        {errors.antiRobotAnswer && (
-                                            <p className="mt-1 text-sm text-red-600">
-                                                {errors.antiRobotAnswer}
+                                        {errors.turnstile && (
+                                            <p className="mt-2 text-sm text-red-600">
+                                                {errors.turnstile}
                                             </p>
                                         )}
                                     </div>

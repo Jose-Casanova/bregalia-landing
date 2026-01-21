@@ -1,10 +1,42 @@
 import { NextRequest, NextResponse } from "next/server";
 import { sendContactEmail } from "@/lib/sendEmail";
 
+// Verify Cloudflare Turnstile token
+async function verifyTurnstileToken(token: string): Promise<boolean> {
+    const secretKey = process.env.TURNSTILE_SECRET_KEY;
+
+    if (!secretKey) {
+        console.error("TURNSTILE_SECRET_KEY is not configured");
+        return false;
+    }
+
+    try {
+        const response = await fetch(
+            "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    secret: secretKey,
+                    response: token,
+                }),
+            }
+        );
+
+        const data = await response.json();
+        return data.success === true;
+    } catch (error) {
+        console.error("Error verifying Turnstile token:", error);
+        return false;
+    }
+}
+
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
-        const { name, email, company, message, antiRobotAnswer } = body;
+        const { name, email, company, message, turnstileToken } = body;
 
         // Validate required fields
         if (!name || !email || !message) {
@@ -23,10 +55,18 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Validate anti-robot answer (5 + 3 = 8)
-        if (parseInt(antiRobotAnswer) !== 8) {
+        // Verify Turnstile token
+        if (!turnstileToken) {
             return NextResponse.json(
-                { error: "Respuesta de seguridad incorrecta" },
+                { error: "Verificación de seguridad requerida" },
+                { status: 400 }
+            );
+        }
+
+        const isValidToken = await verifyTurnstileToken(turnstileToken);
+        if (!isValidToken) {
+            return NextResponse.json(
+                { error: "Verificación de seguridad fallida. Por favor, intenta de nuevo." },
                 { status: 400 }
             );
         }
@@ -38,6 +78,7 @@ export async function POST(request: NextRequest) {
         console.log("Empresa:", company || "No especificada");
         console.log("Mensaje:", message);
         console.log("Fecha:", new Date().toISOString());
+        console.log("Turnstile verificado: ✅");
         console.log("================================");
 
         // Send email using nodemailer
