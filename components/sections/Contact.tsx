@@ -256,12 +256,14 @@ export function Contact() {
                                             Verificación de seguridad *
                                         </label>
                                         <Turnstile
+                                            key={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
                                             siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
                                             onSuccess={(token) => {
                                                 setTurnstileToken(token);
                                                 setErrors((prev) => ({ ...prev, turnstile: "" }));
                                             }}
                                             onError={() => {
+                                                console.error("Turnstile error triggered");
                                                 setTurnstileToken("");
                                                 setErrors((prev) => ({
                                                     ...prev,

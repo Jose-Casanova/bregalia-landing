@@ -16,12 +16,9 @@ async function verifyTurnstileToken(token: string): Promise<boolean> {
             {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/x-www-form-urlencoded",
                 },
-                body: JSON.stringify({
-                    secret: secretKey,
-                    response: token,
-                }),
+                body: `secret=${encodeURIComponent(secretKey)}&response=${encodeURIComponent(token)}`,
             }
         );
 
