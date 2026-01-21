@@ -114,7 +114,7 @@ export function Contact() {
                             <span>Estamos aquí para ayudarte</span>
                         </div>
                         <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
-                            ¿Tienes alguna pregunta?
+                            ¿Tienes alguna pregunta? ¿Solicitar una demo?
                             <br />
                             <span className="text-primary">Contáctanos</span>
                         </h2>

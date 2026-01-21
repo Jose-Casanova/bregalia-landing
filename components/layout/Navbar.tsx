@@ -45,7 +45,7 @@ export function Navbar() {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden md:flex items-center gap-8 uppercase">
                         <Link
                             href="#features"
                             className="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
@@ -66,14 +66,14 @@ export function Navbar() {
                         </Link>
                     </div>
 
-                    <div className="hidden md:flex items-center gap-4">
+                    {/*  <div className="hidden md:flex items-center gap-4">
                         <Button variant="ghost" size="sm" disabled className="opacity-50 cursor-not-allowed">
                             Iniciar Sesión
                         </Button>
                         <Link href="https://bregalia.app/register">
                             <Button size="sm">Empezar Ahora</Button>
                         </Link>
-                    </div>
+                    </div> */}
 
                     {/* Mobile Menu Button */}
                     <button

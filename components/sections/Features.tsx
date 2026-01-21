@@ -29,7 +29,7 @@ export function Features() {
         {
             title: "Turnos y Calendarios",
             description:
-                "Planificación simple de cuadrantes, turnos rotativos y calendarios laborales personalizados.",
+                "Planificación simple de turnos y calendarios laborales personalizados.",
             icon: CalendarDays,
         },
         {

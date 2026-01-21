@@ -42,12 +42,12 @@ export function Regulations() {
             description: "Se establece mediante negociación colectiva, acuerdo de empresa o, en su defecto, decisión del empresario tras consulta previa.",
             icon: Users,
         },
-        {
-            title: "Incumplimientos",
-            description: "No registrar la jornada diaria es una infracción que puede conllevar sanciones graves por parte de la Inspección de Trabajo.",
-            icon: AlertTriangle,
-            highlight: true,
-        },
+        /*  {
+             title: "Incumplimientos",
+             description: "No registrar la jornada diaria es una infracción que puede conllevar sanciones graves por parte de la Inspección de Trabajo.",
+             icon: AlertTriangle,
+             highlight: true,
+         }, */
     ];
 
     return (

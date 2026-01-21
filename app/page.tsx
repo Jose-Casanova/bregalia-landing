@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { Features } from "@/components/sections/Features";
 import { Compliance } from "@/components/sections/Compliance";
+import { EmployeeSimplicity } from "@/components/sections/EmployeeSimplicity";
 import { Regulations } from "@/components/sections/Regulations";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Features />
+      <EmployeeSimplicity />
       <Compliance />
       <Regulations />
       <Contact />
