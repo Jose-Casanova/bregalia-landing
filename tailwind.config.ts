@@ -12,15 +12,15 @@ export default {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
                 primary: {
-                    DEFAULT: "#3B82F6", // Blue 500
+                    DEFAULT: "#93278f", // Brand Purple
                     foreground: "#FFFFFF",
                 },
                 secondary: {
-                    DEFAULT: "#1E293B", // Slate 800
-                    foreground: "#F8FAFC", // Slate 50
+                    DEFAULT: "#678e9b", // Brand Muted Teal
+                    foreground: "#FFFFFF",
                 },
                 accent: {
-                    DEFAULT: "#F59E0B", // Amber 500
+                    DEFAULT: "#F59E0B", // Amber 500 (Keeping as accent for warnings/highlights)
                     foreground: "#FFFFFF",
                 }
             },

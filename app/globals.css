@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #0f172a;
+  --background: #e4e4e7;
+  /* Zinc 200 */
+  --foreground: #0f172a;
   /* Slate 950 */
-  --foreground: #f8fafc;
-  /* Slate 50 */
 }
 
 @layer base {
@@ -21,6 +21,6 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-400;
   }
 }
