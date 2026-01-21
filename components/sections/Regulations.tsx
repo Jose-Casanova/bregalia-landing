@@ -10,8 +10,15 @@ import {
 } from "lucide-react";
 import { MotionDiv } from "@/components/ui/MotionDiv";
 
+interface RegulationItem {
+    title: string;
+    description: string;
+    icon: React.ElementType;
+    highlight?: boolean;
+}
+
 export function Regulations() {
-    const regulations = [
+    const regulations: RegulationItem[] = [
         {
             title: "Obligatoriedad",
             description: "Aplica a todos los sectores y tamaños de empresa, incluyendo teletrabajadores y contratos a tiempo completo o parcial.",
