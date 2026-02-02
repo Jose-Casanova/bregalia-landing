@@ -114,7 +114,7 @@ export async function sendContactEmail(data: ContactEmailData): Promise<void> {
         <body>
             <div class="container">
                 <div class="header">
-                    <h1>📧 Nuevo Mensaje de Contacto</h1>
+                    <h1>Nuevo Mensaje de Contacto de Bregalia</h1>
                 </div>
                 
                 <div class="field">
