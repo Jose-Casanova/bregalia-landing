@@ -23,7 +23,7 @@ export function Features() {
         {
             title: "Gestión de Tiempo",
             description:
-                "Control detallado de horas extras, pausas y compensación horaria.",
+                "Control detallado de horas extras, pausas y compensación horaria. Control de ausencias y absentismo.",
             icon: Clock,
         },
         {
@@ -53,7 +53,7 @@ export function Features() {
         {
             title: "Geolocalización",
             description:
-                "Registro de ubicación en tiempo real para control de ausencias y ausencias justificadas.",
+                "Ubicación de registro en tiempo real, sin seguimiento contínuo (según la Ley).",
             icon: MapPin,
         },
         {
