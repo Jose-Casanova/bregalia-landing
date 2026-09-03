@@ -3,7 +3,11 @@ import { sendContactEmail } from "@/lib/sendEmail";
 
 // Verify Cloudflare Turnstile token
 async function verifyTurnstileToken(token: string): Promise<boolean> {
-    const secretKey = process.env.TURNSTILE_SECRET_KEY;
+    const secretKey =
+        process.env.TURNSTILE_SECRET_KEY ||
+        (process.env.NODE_ENV === "development"
+            ? "1x0000000000000000000000000000000AA"
+            : "");
 
     if (!secretKey) {
         console.error("TURNSTILE_SECRET_KEY is not configured");

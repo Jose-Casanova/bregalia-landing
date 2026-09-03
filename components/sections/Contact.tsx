@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { Mail, Building2, User, MessageSquare, Send } from "lucide-react";
+import { Mail, Building2, User, MessageSquare, Send, ShieldCheck } from "lucide-react";
 import { MotionDiv } from "@/components/ui/MotionDiv";
 import { Turnstile } from "@marsidev/react-turnstile";
 
@@ -251,13 +251,24 @@ export function Contact() {
                                     </div>
 
                                     {/* Cloudflare Turnstile */}
-                                    <div className="bg-slate-50 border border-slate-200 rounded-lg p-4">
-                                        <label className="block text-sm font-medium text-slate-700 mb-3">
-                                            Verificación de seguridad *
-                                        </label>
+                                    <div className="flex flex-col items-center sm:items-start pt-1">
+                                        <div className="flex items-center gap-1.5 text-xs font-medium text-slate-500 mb-2">
+                                            <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                                            <span>Sistema anti-spam</span>
+                                        </div>
                                         <Turnstile
-                                            key={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
-                                            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+                                            key={
+                                                process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ||
+                                                (process.env.NODE_ENV === "development" ? "1x00000000000000000000AA" : "")
+                                            }
+                                            siteKey={
+                                                process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ||
+                                                (process.env.NODE_ENV === "development" ? "1x00000000000000000000AA" : "")
+                                            }
+                                            options={{
+                                                theme: "light",
+                                                size: "normal",
+                                            }}
                                             onSuccess={(token) => {
                                                 setTurnstileToken(token);
                                                 setErrors((prev) => ({ ...prev, turnstile: "" }));
