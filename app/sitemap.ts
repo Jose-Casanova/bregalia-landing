@@ -8,6 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "monthly",
             priority: 1,
         },
-        // Add more URLs here as the project grows
+        {
+            url: "https://bregalia.es/politica-de-privacidad",
+            lastModified: new Date(),
+            changeFrequency: "yearly",
+            priority: 0.3,
+        },
     ];
 }

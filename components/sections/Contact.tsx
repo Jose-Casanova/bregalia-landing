@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Mail, Building2, User, MessageSquare, Send, ShieldCheck } from "lucide-react";
 import { MotionDiv } from "@/components/ui/MotionDiv";
@@ -14,6 +15,7 @@ export function Contact() {
         message: "",
     });
     const [turnstileToken, setTurnstileToken] = useState<string>("");
+    const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
     const [errors, setErrors] = useState<Record<string, string>>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -37,6 +39,10 @@ export function Contact() {
 
         if (!turnstileToken) {
             newErrors.turnstile = "Por favor, completa la verificación de seguridad";
+        }
+
+        if (!acceptedPrivacy) {
+            newErrors.privacy = "Debes aceptar la política de protección de datos para continuar";
         }
 
         setErrors(newErrors);
@@ -288,6 +294,41 @@ export function Contact() {
                                         {errors.turnstile && (
                                             <p className="mt-2 text-sm text-red-600">
                                                 {errors.turnstile}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                    {/* Privacy Policy Checkbox */}
+                                    <div className="pt-1">
+                                        <label className="flex items-start gap-3 cursor-pointer select-none group">
+                                            <input
+                                                type="checkbox"
+                                                id="privacy-policy"
+                                                checked={acceptedPrivacy}
+                                                onChange={(e) => {
+                                                    setAcceptedPrivacy(e.target.checked);
+                                                    if (e.target.checked) {
+                                                        setErrors((prev) => ({ ...prev, privacy: "" }));
+                                                    }
+                                                }}
+                                                className="mt-1 w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary/20 accent-primary cursor-pointer transition-colors"
+                                            />
+                                            <span className="text-sm text-slate-600 leading-snug">
+                                                He leído y acepto la{" "}
+                                                <Link
+                                                    href="/politica-de-privacidad"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-primary font-medium underline underline-offset-2 hover:text-primary/80 transition-colors"
+                                                >
+                                                    Política de Protección de Datos
+                                                </Link>{" "}
+                                                *
+                                            </span>
+                                        </label>
+                                        {errors.privacy && (
+                                            <p className="mt-1.5 text-xs text-red-600 font-medium">
+                                                {errors.privacy}
                                             </p>
                                         )}
                                     </div>
