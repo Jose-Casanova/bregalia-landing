@@ -23,7 +23,7 @@ export function Features() {
         {
             title: "Gestión de Tiempo",
             description:
-                "Control detallado de horas extras, pausas y compensación horaria. Control de ausencias y absentismo.",
+                "Control detallado de horas extras, pausas y compensación horaria. Control de ausencias.",
             icon: Clock,
         },
         {
