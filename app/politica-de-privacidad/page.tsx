@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import { ArrowLeft, Shield, Lock, CheckCircle2, Mail } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowLeft, Shield, Lock, FileText, CheckCircle2, Mail } from "lucide-react";
+import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -16,36 +16,11 @@ export const metadata: Metadata = {
 export default function PoliticaPrivacidadPage() {
     return (
         <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col justify-between">
-            {/* Header / Nav */}
-            <header className="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
-                <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-3 group">
-                        <div className="relative w-12 h-12">
-                            <Image
-                                src="/logo-land.svg"
-                                alt="Bregalia Logo"
-                                fill
-                                className="object-contain"
-                                priority
-                            />
-                        </div>
-                        <span className="text-xl font-bold font-heading text-slate-900 tracking-tight">
-                            Bregalia
-                        </span>
-                    </Link>
+            {/* Shared Navbar */}
+            <Navbar />
 
-                    <Link
-                        href="/"
-                        className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-primary transition-colors px-3 py-2 rounded-lg hover:bg-slate-100"
-                    >
-                        <ArrowLeft className="w-4 h-4" />
-                        <span>Volver al inicio</span>
-                    </Link>
-                </div>
-            </header>
-
-            {/* Main Content */}
-            <main className="container mx-auto px-4 md:px-6 py-12 md:py-16 max-w-4xl flex-1">
+            {/* Main Content — pt accounts for fixed navbar height */}
+            <main className="container mx-auto px-4 md:px-6 pt-32 pb-12 md:pt-36 md:pb-16 max-w-4xl flex-1">
                 {/* Hero / Title */}
                 <div className="mb-10 text-center md:text-left">
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-4">
