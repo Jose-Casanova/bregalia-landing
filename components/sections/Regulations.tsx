@@ -115,20 +115,20 @@ export function Regulations() {
                                 </h3>
 
                                 <p className="text-red-800 text-lg mb-8 max-w-2xl">
-                                    Las multas por no llevar el registro o por falsificarlo se han endurecido significativamente:
+                                    No llevar el registro de jornada es una infracción grave según la LISOS:
                                 </p>
 
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-red-200">
                                         <div className="font-bold text-red-900 text-lg mb-2">Infracciones Leves</div>
-                                        <div className="text-3xl font-bold text-red-600 mb-2">60 € - 625 €</div>
-                                        <p className="text-red-800/80 text-sm">Por errores formales en el registro o documentación.</p>
+                                        <div className="text-3xl font-bold text-red-600 mb-2">70 € - 750 €</div>
+                                        <p className="text-red-800/80 text-sm">Por incumplimientos formales en materia laboral.</p>
                                     </div>
 
                                     <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-red-200">
                                         <div className="font-bold text-red-900 text-lg mb-2">Infracciones Graves</div>
-                                        <div className="text-3xl font-bold text-red-600 mb-2">Hasta 10.000 €</div>
-                                        <p className="text-red-800/80 text-sm">Por trabajador en casos de falta de registro o falsificación.</p>
+                                        <div className="text-3xl font-bold text-red-600 mb-2">751 € - 7.500 €</div>
+                                        <p className="text-red-800/80 text-sm">Por no llevar o no conservar el registro de jornada.</p>
                                     </div>
                                 </div>
                             </div>

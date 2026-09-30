@@ -59,6 +59,12 @@ export function Navbar() {
                             Cumplimiento
                         </Link>
                         <Link
+                            href="/#precios"
+                            className="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        >
+                            Precios
+                        </Link>
+                        <Link
                             href="/#contact"
                             className="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
                         >
@@ -107,6 +113,13 @@ export function Navbar() {
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
                         Cumplimiento
+                    </Link>
+                    <Link
+                        href="/#precios"
+                        className="text-sm font-medium text-slate-600 hover:text-primary p-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                        Precios
                     </Link>
                     <Link
                         href="/#contact"

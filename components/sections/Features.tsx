@@ -65,7 +65,7 @@ export function Features() {
         {
             title: "Seguridad Blindada",
             description:
-                "Protección total con sistemas anti-hack, encriptación avanzada y copias de seguridad automáticas.",
+                "Cada fichaje queda sellado con tecnología blockchain: nadie puede modificarlo sin dejar rastro. Incluido en todos los planes.",
             icon: ShieldCheck,
         },
     ];

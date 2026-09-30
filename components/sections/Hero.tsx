@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import { MotionDiv } from "@/components/ui/MotionDiv";
@@ -12,30 +11,18 @@ export function Hero() {
             <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-secondary/10 blur-[100px] rounded-full pointer-events-none" />
 
             <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
-                <MotionDiv delay={0.1}>
-                    <div className="inline-flex items-center gap-2 mb-8 animate-fade-in">
-                        <Badge variant="default" className="px-3 py-1 rounded-full">
-                            <span className="relative flex h-2 w-2 mr-2">
-                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary/40 opacity-75"></span>
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                            </span>
-                            Nueva version 2.0 disponible
-                        </Badge>
-                    </div>
-                </MotionDiv>
-
                 <MotionDiv delay={0.2}>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 tracking-tight">
-                        Tu equipo, tus horarios, <br />
-                        <span className="text-gradient">bajo control.</span>
+                        Todo incluido. Para todos. <br />
+                        <span className="text-gradient">Desde el primer empleado.</span>
                     </h1>
                 </MotionDiv>
 
                 <MotionDiv delay={0.3}>
                     <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mt-20 mb-20 leading-relaxed">
-                        Bregalia simplifica el registro de jornadas, turnos y vacaciones.
-                        Cumple con la normativa vigente y evita sanciones con una plataforma
-                        moderna y fácil de usar.
+                        El control horario completo y sencillo para pequeñas y medianas empresas:
+                        un único plan con todas las funciones, fichajes protegidos con blockchain
+                        y un precio que crece al ritmo de tu equipo.
                     </p>
                 </MotionDiv>
 
@@ -60,7 +47,7 @@ export function Hero() {
                     <div className="flex items-center justify-center gap-6 text-lg text-slate-600 mb-20 flex-wrap">
                         <div className="flex items-center gap-2">
                             <CheckCircle2 className="h-10 w-10 text-primary" />
-                            <span>Sin inversión inicial</span>
+                            <span>Un solo plan, todo incluido</span>
                         </div>
                         {/*  <div className="flex items-center gap-2">
                             <CheckCircle2 className="h-5 w-5 text-primary" />
@@ -68,11 +55,11 @@ export function Hero() {
                         </div> */}
                         <div className="flex items-center gap-2">
                             <CheckCircle2 className="h-10 w-10 text-primary" />
-                            <span>Pago mensual sin permanencia</span>
+                            <span>Fichajes sellados con blockchain</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <CheckCircle2 className="h-10 w-10 text-primary" />
-                            <span>Soporte personal sin esperas</span>
+                            <span>Sin permanencia</span>
                         </div>
                     </div>
                 </MotionDiv>

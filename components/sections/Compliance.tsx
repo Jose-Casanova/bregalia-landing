@@ -30,7 +30,7 @@ export function Compliance() {
                                         <Lock className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-foreground mb-2">Cumplimiento LGPD</h3>
+                                        <h3 className="text-xl font-bold text-foreground mb-2">Cumplimiento RGPD</h3>
                                         <p className="text-slate-600">
                                             Tus datos y los de tus empleados están encriptados y protegidos bajo los más estrictos estándares de seguridad europeos.
                                         </p>
