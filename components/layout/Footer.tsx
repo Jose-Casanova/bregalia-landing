@@ -8,6 +8,12 @@ export function Footer() {
                 <p className="mb-3 text-lg font-heading text-primary font-bold">Bregalia</p>
                 <div className="flex items-center justify-center gap-6 mb-4 text-sm">
                     <Link
+                        href="/blog"
+                        className="text-slate-600 hover:text-primary transition-colors underline-offset-4 hover:underline"
+                    >
+                        Blog
+                    </Link>
+                    <Link
                         href="/politica-de-privacidad"
                         className="text-slate-600 hover:text-primary transition-colors underline-offset-4 hover:underline"
                     >

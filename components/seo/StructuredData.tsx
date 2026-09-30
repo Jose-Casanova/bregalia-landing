@@ -16,11 +16,6 @@ export function StructuredData() {
         name: "Bregalia",
         operatingSystem: "Web",
         applicationCategory: "BusinessApplication",
-        offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "EUR",
-        },
         description: "Plataforma de control horario y gestión de equipos para empresas.",
         featureList: [
             "Fichaje digital",
