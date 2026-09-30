@@ -8,6 +8,7 @@ import { Contact } from "@/components/sections/Contact";
 import { SmallBusiness } from "@/components/sections/SmallBusiness";
 import { AllMeasured } from "@/components/sections/AllMeasured";
 import { Pricing } from "@/components/sections/Pricing";
+import { PaperObjection } from "@/components/sections/PaperObjection";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <EmployeeSimplicity />
       <Compliance />
       <Regulations />
+      <PaperObjection />
       <Pricing />
       <Contact />
 

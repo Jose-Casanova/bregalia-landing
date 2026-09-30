@@ -13,7 +13,7 @@ const included = [
 
 export function Pricing() {
     return (
-        <section id="precios" className="py-24">
+        <section id="precios" className="py-24 bg-slate-50">
             <div className="container mx-auto px-4 md:px-6">
                 <MotionDiv>
                     <div className="text-center max-w-3xl mx-auto mb-12">
