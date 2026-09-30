@@ -47,22 +47,28 @@ export function Navbar() {
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center gap-8 uppercase">
                         <Link
-                            href="#features"
+                            href="/#features"
                             className="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
                         >
                             Funcionalidades
                         </Link>
                         <Link
-                            href="#compliance"
+                            href="/#compliance"
                             className="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
                         >
                             Cumplimiento
                         </Link>
                         <Link
-                            href="#contact"
+                            href="/#contact"
                             className="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
                         >
                             Contacto
+                        </Link>
+                        <Link
+                            href="/blog"
+                            className="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        >
+                            Blog
                         </Link>
                     </div>
 
@@ -89,25 +95,32 @@ export function Navbar() {
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-xl border-b border-white/5 p-4 flex flex-col gap-4 shadow-2xl">
                     <Link
-                        href="#features"
+                        href="/#features"
                         className="text-sm font-medium text-slate-600 hover:text-primary p-2"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
                         Funcionalidades
                     </Link>
                     <Link
-                        href="#compliance"
+                        href="/#compliance"
                         className="text-sm font-medium text-slate-600 hover:text-white p-2"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
                         Cumplimiento
                     </Link>
                     <Link
-                        href="#contact"
+                        href="/#contact"
                         className="text-sm font-medium text-slate-600 hover:text-primary p-2"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
                         Contacto
+                    </Link>
+                    <Link
+                        href="/blog"
+                        className="text-sm font-medium text-slate-600 hover:text-primary p-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                        Blog
                     </Link>
                     <hr className="border-black/5" />
                     <Button variant="ghost" className="w-full justify-start opacity-50 cursor-not-allowed" disabled>
