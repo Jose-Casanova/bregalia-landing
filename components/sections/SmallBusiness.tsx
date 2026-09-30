@@ -44,7 +44,7 @@ export function SmallBusiness() {
                                 mientras el problema de Carmen es una hoja en la barra que se rellena a final de semana,
                                 &ldquo;más o menos&rdquo;, sin saber cuántas horas extra acumula su equipo ni quién tiene
                                 vacaciones pendientes, Luis lucha por cuadrar turnos, ausencias y horas extra de setenta
-                                personas con un programa que le cobra aparte los informes, la geolocalización o los turnos,
+                                personas con un Excel o un programa que le cobra aparte los informes, la geolocalización o los turnos,
                                 y en el que cada módulo nuevo sube la factura.
                             </p>
                             <p>
