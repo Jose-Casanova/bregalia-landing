@@ -30,41 +30,29 @@ export function SmallBusiness() {
 
                     <MotionDiv delay={0.1}>
                         <div className="bg-white rounded-2xl border border-black/5 shadow-sm p-6 md:p-10 space-y-5 text-lg text-slate-600 leading-relaxed">
-                            <p>
-                                Carmen tiene una cafetería en el barrio con seis personas en plantilla. Abre a las siete,
-                                cuadra la caja a las once y, entre medias, hace de encargada, de gestora y de lo que haga falta.
+                            <p className="text-slate-900 font-medium">
+                                Luis dirige una empresa de servicios con setenta trabajadores y Carmen tiene una cafetería
+                                en el barrio con seis personas en plantilla.
                             </p>
                             <p>
-                                Cuando su gestor le dijo que tenía que registrar la jornada de su equipo, empezó a buscar y
-                                encontró siempre lo mismo: un plan básico que se quedaba corto y, para tener lo importante,
-                                planes &ldquo;Pro&rdquo; o &ldquo;Enterprise&rdquo; pensados para empresas mucho más grandes que la suya.
+                                Carmen abre a las siete, cuadra la caja a las once y, entre medias, hace de encargada, de
+                                gestora y de lo que haga falta. Mientras, Luis gestiona setenta trabajadores, turnos de
+                                mañana, tarde y noche, y parte del equipo fichando desde la calle.
                             </p>
                             <p>
-                                Acabó con una hoja en la barra que se rellenaba a final de semana, &ldquo;más o menos&rdquo;.
-                                Sabía que no valía, y encima no tenía ni idea de cuántas horas extra acumulaba su equipo
-                                ni de quién tenía vacaciones pendientes.
+                                Los dos tienen la misma obligación: registrar cada día la jornada de su equipo. Pero
+                                mientras el problema de Carmen es una hoja en la barra que se rellena a final de semana,
+                                &ldquo;más o menos&rdquo;, sin saber cuántas horas extra acumula su equipo ni quién tiene
+                                vacaciones pendientes, Luis lucha por cuadrar turnos, ausencias y horas extra de setenta
+                                personas con un programa que le cobra aparte los informes, la geolocalización o los turnos,
+                                y en el que cada módulo nuevo sube la factura.
                             </p>
                             <p>
-                                <strong className="text-slate-900">Bregalia nace para Carmen.</strong> Y para el taller
-                                de cuatro mecánicos, la clínica dental, la tienda de barrio o la empresa de limpieza con
-                                treinta personas repartidas por la ciudad. Porque una pyme no es una versión recortada de
-                                una gran empresa: necesita las mismas garantías, contadas de forma sencilla.
-                            </p>
-                        </div>
-                    </MotionDiv>
-
-                    <MotionDiv delay={0.15}>
-                        <div className="mt-6 bg-white rounded-2xl border border-black/5 shadow-sm p-6 md:p-10 space-y-5 text-lg text-slate-600 leading-relaxed">
-                            <p>
-                                Luis dirige una empresa de servicios con setenta trabajadores, turnos de mañana, tarde y
-                                noche, y parte del equipo fichando desde la calle. Su problema no era el papel: era que su
-                                programa cobraba aparte los informes, la geolocalización o la gestión de turnos, y cada
-                                módulo nuevo subía la factura.
-                            </p>
-                            <p>
-                                <strong className="text-slate-900">Con Bregalia lo tiene todo desde el primer día.</strong>{" "}
-                                Y cuando contrata a diez personas más, simplemente pasa al siguiente tramo, sin cambiar de
-                                producto ni perder nada por el camino.
+                                <strong className="text-slate-900">Bregalia nace para los dos.</strong> Y para el taller,
+                                la clínica, la tienda de barrio o la empresa de limpieza con personal repartido por la
+                                ciudad. Porque una pyme no es una versión recortada de una gran empresa: necesita las
+                                mismas garantías, contadas de forma sencilla. Todo incluido desde el primer día y, si la
+                                empresa crece, basta con pasar al siguiente tramo.
                             </p>
                         </div>
                     </MotionDiv>
