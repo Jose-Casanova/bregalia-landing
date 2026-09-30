@@ -20,8 +20,8 @@ export function SmallBusiness() {
                                 Hecho para pymes
                             </div>
                             <h2 className="text-3xl md:text-5xl font-bold font-heading tracking-tight text-slate-900">
-                                Una pyme no es una versión <br className="hidden md:block" />
-                                <span className="text-primary">recortada de una gran empresa.</span>
+                                Hecho a la medida <br className="hidden md:block" />
+                                <span className="text-primary">de tu negocio.</span>
                             </h2>
                         </div>
                     </MotionDiv>
@@ -36,11 +36,17 @@ export function SmallBusiness() {
                                 Cuando su gestor le dijo que tenía que registrar la jornada de su equipo, empezó a buscar y
                                 encontró siempre lo mismo: un plan básico que se quedaba corto y, para tener lo importante,
                                 planes &ldquo;Pro&rdquo; o &ldquo;Enterprise&rdquo; pensados para empresas mucho más grandes que la suya.
-                                Acabó con una hoja en la barra que se rellenaba a final de semana, &ldquo;más o menos&rdquo;.
                             </p>
-                            <p className="text-slate-900 font-semibold">
-                                Bregalia nace para Carmen. Y para cualquier negocio que necesita las mismas garantías
-                                que una gran empresa, contadas de forma sencilla.
+                            <p>
+                                Acabó con una hoja en la barra que se rellenaba a final de semana, &ldquo;más o menos&rdquo;.
+                                Sabía que no valía, y encima no tenía ni idea de cuántas horas extra acumulaba su equipo
+                                ni de quién tenía vacaciones pendientes.
+                            </p>
+                            <p>
+                                <strong className="text-slate-900">Bregalia nace para Carmen.</strong> Y para el taller
+                                de cuatro mecánicos, la clínica dental, la tienda de barrio o la empresa de limpieza con
+                                treinta personas repartidas por la ciudad. Porque una pyme no es una versión recortada de
+                                una gran empresa: necesita las mismas garantías, contadas de forma sencilla.
                             </p>
                         </div>
                     </MotionDiv>
