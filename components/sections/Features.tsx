@@ -17,7 +17,7 @@ export function Features() {
         {
             title: "Fichaje Avanzado",
             description:
-                "Registro seguro mediante datos biométricos, códigos QR o PIN. Flexibilidad total para tu equipo.",
+                "Ficha desde el móvil, con código QR o PIN, sin datos biométricos. Flexibilidad total para tu equipo.",
             icon: Fingerprint,
         },
         {
