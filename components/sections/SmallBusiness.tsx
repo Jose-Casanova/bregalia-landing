@@ -1,4 +1,4 @@
-import { Coffee, Wrench, Stethoscope, Store, Sparkles } from "lucide-react";
+import { Coffee, Wrench, Stethoscope, Store, Sparkles, Factory, Truck } from "lucide-react";
 import { MotionDiv } from "@/components/ui/MotionDiv";
 
 const businesses = [
@@ -7,6 +7,8 @@ const businesses = [
     { label: "Clínicas", icon: Stethoscope },
     { label: "Comercios", icon: Store },
     { label: "Empresas de limpieza", icon: Sparkles },
+    { label: "Industria", icon: Factory },
+    { label: "Logística y reparto", icon: Truck },
 ];
 
 export function SmallBusiness() {
@@ -17,11 +19,11 @@ export function SmallBusiness() {
                     <MotionDiv>
                         <div className="text-center mb-12">
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                                Hecho para pymes
+                                Pequeñas y medianas empresas
                             </div>
                             <h2 className="text-3xl md:text-5xl font-bold font-heading tracking-tight text-slate-900">
-                                Hecho a la medida <br className="hidden md:block" />
-                                <span className="text-primary">de tu negocio.</span>
+                                Hecho a la medida de tu empresa, <br className="hidden md:block" />
+                                <span className="text-primary">tenga el tamaño que tenga.</span>
                             </h2>
                         </div>
                     </MotionDiv>
@@ -51,7 +53,29 @@ export function SmallBusiness() {
                         </div>
                     </MotionDiv>
 
+                    <MotionDiv delay={0.15}>
+                        <div className="mt-6 bg-white rounded-2xl border border-black/5 shadow-sm p-6 md:p-10 space-y-5 text-lg text-slate-600 leading-relaxed">
+                            <p>
+                                Luis dirige una empresa de servicios con setenta trabajadores, turnos de mañana, tarde y
+                                noche, y parte del equipo fichando desde la calle. Su problema no era el papel: era que su
+                                programa cobraba aparte los informes, la geolocalización o la gestión de turnos, y cada
+                                módulo nuevo subía la factura.
+                            </p>
+                            <p>
+                                <strong className="text-slate-900">Con Bregalia lo tiene todo desde el primer día.</strong>{" "}
+                                Y cuando contrata a diez personas más, simplemente pasa al siguiente tramo, sin cambiar de
+                                producto ni perder nada por el camino.
+                            </p>
+                        </div>
+                    </MotionDiv>
+
                     <MotionDiv delay={0.2}>
+                        <p className="text-center text-xl md:text-2xl font-bold font-heading text-slate-900 mt-12">
+                            Seis empleados o setenta: <span className="text-primary">las mismas funciones, las mismas garantías.</span>
+                        </p>
+                    </MotionDiv>
+
+                    <MotionDiv delay={0.25}>
                         <div className="flex flex-wrap justify-center gap-3 mt-10">
                             {businesses.map(({ label, icon: Icon }) => (
                                 <span

@@ -14,7 +14,7 @@ export function Hero() {
                 <MotionDiv delay={0.2}>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 tracking-tight">
                         Todo incluido. Para todos. <br />
-                        <span className="text-gradient">Desde el primer empleado.</span>
+                        <span className="text-gradient">Del primer empleado al último.</span>
                     </h1>
                 </MotionDiv>
 
