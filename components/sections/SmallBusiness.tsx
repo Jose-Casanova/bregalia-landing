@@ -52,7 +52,7 @@ export function SmallBusiness() {
                                 la clínica, la tienda de barrio o la empresa de limpieza con personal repartido por la
                                 ciudad. Porque una pyme no es una versión recortada de una gran empresa: necesita las
                                 mismas garantías, contadas de forma sencilla. Todo incluido desde el primer día y, si la
-                                empresa crece, basta con pasar al siguiente tramo.
+                                empresa crece, basta con pasar al siguiente tramo sin incluir nuevos módulos.
                             </p>
                         </div>
                     </MotionDiv>
