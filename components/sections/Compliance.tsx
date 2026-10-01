@@ -82,9 +82,15 @@ export function Compliance() {
                                     </div>
 
                                     <div className="pt-6">
-                                        <Button className="w-full bg-white hover:bg-slate-50 text-primary border border-primary/20 shadow-sm">
-                                            Descargar Informe de Ejemplo
-                                        </Button>
+                                        <a
+                                            href="/informe-ejemplo-bregalia.pdf"
+                                            download="informe-ejemplo-bregalia.pdf"
+                                            className="contents"
+                                        >
+                                            <Button className="w-full bg-white hover:bg-slate-50 text-primary border border-primary/20 shadow-sm">
+                                                Descargar Informe de Ejemplo
+                                            </Button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
