@@ -13,8 +13,8 @@ export function Hero() {
             <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
                 <MotionDiv delay={0.2}>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 tracking-tight">
-                        Todo incluido. Para todos. <br />
-                        <span className="text-gradient">Del primer empleado al último.</span>
+                        Tu equipo, tu seguridad, <br />
+                        <span className="text-gradient">bajo control.</span>
                     </h1>
                 </MotionDiv>
 
