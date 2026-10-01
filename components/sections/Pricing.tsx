@@ -38,7 +38,7 @@ export function Pricing() {
                                     pasas al siguiente tramo sin cambiar de producto.
                                 </p>
                                 <p className="text-slate-600 leading-relaxed mb-8">
-                                    Pago mensual y sin permanencia.
+                                    Pago mensual o anual y sin permanencia.
                                 </p>
                                 <a href="#contact" className="contents">
                                     <Button size="lg" className="rounded-full w-full md:w-auto">
