@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Clock, TrendingUp, Hourglass, Palmtree, UserX, ChartBar } from "lucide-react";
+import { Clock, TrendingUp, Hourglass, Palmtree, UserX, ChartBar, FileText } from "lucide-react";
 import { MotionDiv } from "@/components/ui/MotionDiv";
 
 const metrics = [
@@ -39,6 +39,16 @@ export function AllMeasured() {
                                 </div>
                             ))}
                         </div>
+
+                        <a
+                            href="/informe-ejemplo-bregalia.pdf"
+                            target="_blank"
+                            rel="noopener"
+                            className="mt-8 inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/5 px-5 py-3 font-medium text-primary transition-colors hover:bg-primary/10"
+                        >
+                            <FileText className="w-5 h-5" />
+                            Ver un informe de ejemplo (PDF)
+                        </a>
                     </MotionDiv>
 
                     <MotionDiv direction="left" delay={0.2}>
